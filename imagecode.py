@@ -105,11 +105,27 @@ def Encode(src, message, dest):
         print("ERROR: Need larger file size")
     else:
         hidenPixel,mat=chochePixel(width,height,len(b_message))
+        print("")
+        print("Level 1- The Pixel That the massage is hidden: ")
+        print(hidenPixel)
+        print("")
         med=getMedPixels(hidenPixel,mat,img2,width,height)
+        print("Level 2- The med of Pixels is:")
+        print(med)
+        print("")
         var=getVarPixels(hidenPixel,mat,img2,width,height,med)
+        print("Level 3- The var of Pixels is :")
+        print(var)
+        print("")
+
         maxVar=max(var)
         division =6
+        print("Level 4- ")
+        print("Division= {0}".format(division))
+       
         step =maxVar/division
+        print("Step={0}".format(step))
+
         # b_message=textwrap.wrap(b_message, 2)
         # print(step)
         # t=(width*height)/step 
@@ -119,7 +135,9 @@ def Encode(src, message, dest):
             indexRow,indexCol = getIndex(height,width,hidenPixel[i],mat)
             img2[indexRow][indexCol] = int(bin(img2[indexRow][indexCol])+b_message[index],2)
             index=index+1
-        img2=img2.reshape(height, width,1)
+        # img2=img2.reshape(height, width,1)
+        # im = Image.new('L',img2.size )
+        # im.putdata(img2)
         # enc_img = Image.fromarray(img2.astype('uint8'), img2.mode)
         # enc_img.save("newImage.png")
         # print("Image Encoded Successfully")
@@ -157,7 +175,8 @@ def Decode(src,hidenPixel,mat):
     else:
         print("No Hidden Message Found")
 
-
-hidenPixel,mat=Encode('pic.jpeg', 'AAA', 'newGarayScaleImg.jpg')
+print("Enter Massage")
+massage=input()
+hidenPixel,mat=Encode('pic.jpeg', massage, 'newGarayScaleImg.jpg')
 # Decode('pic.jpeg',hidenPixel,mat)
 
