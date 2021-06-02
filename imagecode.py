@@ -158,6 +158,6 @@ def Decode(src,hidenPixel,mat):
         print("No Hidden Message Found")
 
 
-hidenPixel,mat=Encode('garayScaleImg.jpg', 'AAA', 'newGarayScaleImg.jpg')
-# Decode('garayScaleImg.jpg',hidenPixel,mat)
+hidenPixel,mat=Encode('pic.jpeg', 'AAA', 'newGarayScaleImg.jpg')
+# Decode('pic.jpeg',hidenPixel,mat)
 
