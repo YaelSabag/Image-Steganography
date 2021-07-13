@@ -40,7 +40,7 @@ def decrypt(msg):
 
 def Encode(src, message, dest, qualSecu,shift):
     message= caesar_cipher(message,shift)
-    print(message)
+    print("The encrypted message is: ", message)
     preMessage = message
     fp = open(src,"rb")
     img = PIL.Image.open(fp) 
