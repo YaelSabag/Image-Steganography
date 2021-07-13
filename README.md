@@ -1,6 +1,5 @@
 # Image Steganography Based on Local Variance
-System for a human resources company that employs contractor workers and offers the services of
-these employees to other employers as per the requirements.
+The system implements stenography in images.
 
 ## Table of Content
 * [General Information](#general-information)
@@ -9,53 +8,36 @@ these employees to other employers as per the requirements.
 * [Team](#team)
 
 ## General Information 
-The system is built for a human resources company.
-We have built a website that will be used by the company employees, contractor workers and the employers from another companies.
-The system is designed to:
-* manage database
-* documenting dates and working hours
-* calculate salaries
+The system encrypts a message within an image and producing an image with a watermark.
+In addition, the system implements the extraction and decoding of the encrypted message from the image.
+
+We added 3 improvements to the system:
+1. You can select color images and encrypt them.
+2. You can also add a layer of protection and encrypt the message and then hide the encrypted message in the image so that after extracting from the image it is necessary to    decrypt it in order to receive the original message.
+3. Lastly, the system also works with images with white noise.
 
 ## Technologies
 The system runs on a Windows operating system and is built with Visual Studio Code and created with:
- * node.js 14.16.0 LTS
- * express.js
- * CHAI and MOCHA - For tests
- * bootstrap 4.6.0 - For style
- * nodemon 2.0.7 - To track changes in the code and restart the server after each change
- * circleCi - For the Continues integration process
- * ESlint
- * jQuery
- * Joi- For test for DB
- * Mongoose - For schemes
- * body parcer
- * bcrypt - For encription of passwords
- * java script
- * css
- * html
- * The system uses Heroku for cloud services and MongoDB.
+*Python version :3.8.3
+*numpy
+*tkinter
+*PIL
+
 
 ## Setup
-Clone this repo to your desktop and run npm install: 
- `npm install`
+Clone this repo to your desktop and run: 
 
-In order to run the tests use:
- `npm run test`
+ `pip install numpy`
 
-In order to run the lint use:
- `npm run lint`
+ `pip install PIL`
  
-In order to activate and run the server use:
- `npm run dev`
-
- In order to run the project use:
- `npm start`
+ `pip install tk`
+ 
+ `pip install Pillow`
  
  ## Team
  * Hodaya Siman Tov
  * Kineret Levi
- * Tal Farhan
- * Ravit Clark
- * Reut Pahima
+ * Yael Sabag
+ * Shaked Levi
  * Rachel Levi
-
