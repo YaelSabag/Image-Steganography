@@ -14,7 +14,7 @@ In addition, the system implements the extraction and decoding of the encrypted 
 We added 3 improvements to the system:
 1. You can select color images and encrypt them.
 2. You can also add a layer of protection and encrypt the message and then hide the encrypted message in the image so that after extracting from the image it is necessary to    decrypt it in order to receive the original message.
-3. Lastly, the system also works with images with white noise.
+3. The system also works with images with white noise.
 
 ## Technologies
 The system runs on a Windows operating system and is built with Visual Studio Code and created with:
